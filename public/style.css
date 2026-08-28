@@ -5,35 +5,31 @@
   --accent: #dcfd00;
   --gray: #a3a5a8;
   --light-gray: #c3c5c8;
-  --card-bg: #f9f9f9;
-  --card-border: #e5e5e5;
-  --file-bg: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --card-bg: #141414;
-    --card-border: #2a2a2a;
-    --file-bg: #1e1e1e;
+  }
+
+  html {
+    color-scheme: dark;
   }
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
 }
 
 html,
 body {
-  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   color: var(--foreground);
@@ -43,73 +39,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 24px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 48px 40px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  max-width: 420px;
-  width: 100%;
-  text-align: center;
-}
-
-h1 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-p {
-  color: var(--gray);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.files {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.file {
-  background: var(--file-bg);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-family: monospace;
-  font-size: 13px;
-  color: var(--gray);
-}
-
-.button {
-  display: inline-block;
-  background: var(--primary);
-  color: #ffffff;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.button:hover {
-  opacity: 0.9;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   color: var(--primary);
   text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
 }
