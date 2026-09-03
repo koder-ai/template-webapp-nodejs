@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://koder.ai">
+  <a href="https://koder.com">
     <img src="https://s1.koder.com/app/logos/app-logo.svg" width="300" alt="koderAI" />
   </a>
 </p>
